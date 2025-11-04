@@ -1,0 +1,268 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f4f6f9;
+  --foreground: #2c3e50;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #f4f6f9;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Arial', sans-serif;
+}
+
+/* ✅ Admin Dashboard Layout */
+.admin-dashboard {
+  display: flex;
+  height: 100vh;
+  background: #f4f6f9;
+}
+
+/* ✅ Sidebar */
+.sidebar {
+  width: 280px;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 2px solid #1a5276;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-list-item {
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  transition: background 0.3s ease;
+  text-align: center;
+}
+
+.user-list-item:hover,
+.user-list-item.active {
+  background: #1a5276;
+  color: white;
+}
+
+/* ✅ Chat Container */
+.chat-container {
+  flex-grow: 2;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+/* ✅ Chat Header */
+.chat-header {
+  background: #007bff;
+  color: white;
+  padding: 15px;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ✅ Pinned Messages */
+.pinned-messages {
+  background: #ffc107;
+  padding: 10px;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-bottom: 2px solid #f39c12;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* ✅ Chat Messages */
+.chat-messages {
+  flex-grow: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #f9f9f9;
+}
+
+/* ✅ Chat Bubbles */
+.message {
+  max-width: 75%;
+  padding: 12px;
+  border-radius: 18px;
+  word-wrap: break-word;
+  font-size: 1rem;
+  display: inline-block;
+  position: relative;
+}
+
+.user-message {
+  background: #007bff;
+  color: white;
+  align-self: flex-end;
+  border-top-right-radius: 0;
+}
+
+.admin-message {
+  background: #2ecc71;
+  color: white;
+  align-self: flex-start;
+  border-top-left-radius: 0;
+}
+
+/* ✅ Context Menu (Right-Click) */
+.context-menu {
+  position: absolute;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  z-index: 10;
+}
+
+.context-menu button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.context-menu button:hover {
+  background: #f1f1f1;
+}
+
+/* ✅ Chat Input */
+.chat-input-container {
+  display: flex;
+  padding: 12px;
+  background: #ecf0f1;
+  border-top: 2px solid #ddd;
+}
+
+.chat-input {
+  flex-grow: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  background: white;
+}
+
+.chat-send-btn {
+  background: #007bff;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.chat-send-btn:hover {
+  background: #0056b3;
+}
+
+/* ✅ File Upload Button */
+.file-upload-label {
+  background: #28a745;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.file-upload-label:hover {
+  background: #218838;
+}
+
+/* ✅ Read Receipts */
+.read-receipt {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: right;
+  margin-top: 2px;
+}
+
+/* ✅ User Profile Section */
+.user-profile {
+  width: 280px;
+  background: white;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.profile-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.profile-info {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.profile-actions {
+  margin-top: 15px;
+}
+
+.profile-actions button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-actions button:hover {
+  background: #0056b3;
+}

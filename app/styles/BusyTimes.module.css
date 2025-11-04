@@ -1,0 +1,167 @@
+.busyTimesSlider {
+  -webkit-appearance: none;
+  width: 12px; /* Increased bar width */
+  background: transparent;
+  writing-mode: bt-lr;
+  -webkit-writing-mode: bt-lr;
+  -webkit-appearance: slider-vertical;
+}
+
+.busyTimesSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 100%;
+  width: 12px; /* Match bar width */
+  background: #60A5FA; /* Updated color for better visibility */
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.busyTimesSlider::-webkit-slider-runnable-track {
+  width: 12px; /* Match bar width */
+  cursor: pointer;
+  background: #4B5563;
+  border-radius: 4px;
+}
+
+.busyTimesSlider:focus {
+  outline: none;
+}
+
+.dayButton {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+}
+
+.dayButtonActive {
+  color: #60A5FA;
+  border-bottom: 2px solid #60A5FA;
+}
+
+.dayButtonInactive {
+  color: #9CA3AF;
+}
+
+.dayButtonInactive:hover {
+  color: #D1D5DB;
+}
+
+.graphContainer {
+  position: relative;
+  height: 16rem; /* Increased height for better visibility */
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.percentageLabels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #9CA3AF;
+  margin-right: 1rem;
+}
+
+.graphBars {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem; /* Increased gap between bars */
+  flex: 1;
+}
+
+.graphBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timeLabel {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  color: #9CA3AF;
+}
+
+.percentageTooltip {
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 0.5rem;
+  background: #4B5563;
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.graphBar:hover .percentageTooltip {
+  opacity: 1;
+}
+.dayButton {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.dayButtonActive {
+  background-color: #4F46E5;
+  color: white;
+}
+
+.dayButtonInactive {
+  background-color: #374151;
+  color: #9CA3AF;
+}
+
+.dayButtonInactive:hover {
+  background-color: #4B5563;
+}
+
+.graphContainer {
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  margin: 2rem 0;
+}
+
+.graphBars {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+  height: 100%;
+  padding-bottom: 1.5rem;
+}
+
+.busyTimesSlider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.dayButton {
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  border-radius: 0.25rem;
+}
+
+.dayButtonActive {
+  color: #3B82F6;
+  border-bottom: 2px solid #3B82F6;
+  font-weight: 500;
+}
+
+.dayButtonInactive {
+  color: #9CA3AF;
+}
+
+.dayButtonInactive:hover {
+  color: #D1D5DB;
+}
