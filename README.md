@@ -259,9 +259,6 @@ When evaluating contributions:
 - `npm run test:coverage` - Generate test coverage report
 - `npm run test:e2e` - Run end-to-end tests
 
-## 📄 License
-
-[Add your license information here]
 
 ## 🙏 Acknowledgments
 
